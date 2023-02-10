@@ -15,7 +15,14 @@ def client_connect():
 
         print("Received message from server: " + data)
 
-        message = input("")
+        message = input("Do put message:")
+
+    client_socket.close()
+
+if __name__ == "__main__":
+    client_connect()  
+    
+          
 
         
                                                                       
