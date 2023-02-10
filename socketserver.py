@@ -16,7 +16,7 @@ def server_connect():
         data = conn.recv(2700).decode()
         if not data:
             break
-        print("Received from client: " + str(data))
+        print("Received from socketserver: " + str(data))
         data = input('Input message:')
         conn.send(data.encode())
 

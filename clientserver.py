@@ -13,7 +13,7 @@ def client_connect():
         client_socket.send(message.encode())
         data = client_connect.recv(2700).decode()
 
-        print("Received message from server: " + data)
+        print("Received message from clientserver: " + data)
 
         message = input("Do put message:")
 
