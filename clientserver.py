@@ -7,7 +7,7 @@ def client_connect():
     client_socket = socket.socket()
     client_socket.connect((host, port))
 
-    message = input("Add message:")
+    message = input("Input message:")
 
     while message.lower().strip() != "message":
         client_socket.send(message.encode())
@@ -15,7 +15,7 @@ def client_connect():
 
         print("Received message from socketserver: " + data)
 
-        message = input("Do put message:")
+        message = input("Add message:")
 
     client_socket.close()
 
