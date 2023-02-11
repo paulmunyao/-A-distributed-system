@@ -15,7 +15,7 @@ def client_connect():
 
         print("Received message from socketserver: " + data)
 
-        message = input("Add message:")
+        message = input(" message:")
 
     client_socket.close()
 
