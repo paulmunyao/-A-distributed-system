@@ -1,7 +1,7 @@
 import socket
 
 
-def client_program():
+def client_connect():
     host = socket.gethostname()
     port = 2700
 
@@ -12,7 +12,7 @@ def client_program():
 
     while message.lower().strip() != "message":
         client_socket.send(message.encode())
-        data = client_program.recv(2700).decode()
+        data = client_socket.recv(2700).decode()
 
         print("Received message from socketserver: " + data)
 
@@ -22,4 +22,4 @@ def client_program():
 
 
 if __name__ == "__main__":
-    client_program()
+    client_connect()

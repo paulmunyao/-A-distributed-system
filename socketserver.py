@@ -1,7 +1,7 @@
 import socket
 
 
-def server_program():
+def server_connect():
     host = socket.gethostname()
     port = 2700
 
@@ -25,4 +25,4 @@ def server_program():
 
 
 if __name__ == '__main__':
-    server_program()
+    server_connect()
