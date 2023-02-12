@@ -1,15 +1,16 @@
 import socket
 
-def server_connect():
+
+def server_program():
     host = socket.gethostname()
     port = 2700
 
     server_socket = socket.socket()
-    server_socket.bind((host,port))
+    server_socket.bind((host, port))
 
     # Configuring the server to hold a maximum number of clients
     server_socket.listen(100)
-    conn,address = server_socket.accept()
+    conn, address = server_socket.accept()
     print("Connection from:" + str(address))
 
     while True:
@@ -22,5 +23,6 @@ def server_connect():
 
     conn.close()
 
+
 if __name__ == '__main__':
-    server_connect()    
+    server_program()
