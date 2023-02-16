@@ -27,6 +27,7 @@ def server_connect(self):
 
     while True:
         data = conn.recv(2700).decode()
+        threading.Thread(target=server_connect,args=(data,)).start()
         if not data:
             break
         print("Received from clientserver: " + str(data))
