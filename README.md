@@ -127,8 +127,10 @@ If you like this project...
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > I would like to thank 
-> https://github.com/EdwinWalela
-> https://github.com/habbes
+
+- https://github.com/EdwinWalela
+
+- https://github.com/habbes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
