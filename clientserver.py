@@ -9,12 +9,12 @@ class Client:
         self.socket = None
 
 
-def client_connect():
+def client_connect(self):
     # host = socket.gethostname()
     # port = 2700
 
-    client_socket = socket.socket()
-    client_socket.connect((host, port))
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect((self.host, self.port))
 
     message = input("Input message:")
 
