@@ -95,7 +95,11 @@ def new_rank_client(self):
     self.highest_rank = +1
     return self.highest_rank
 
-    
+
+def notify_clients(self):
+    for n in self.clients:
+        rank, client_socket = n
+        client_socket.send("New command is available".encode())
 
 
 if __name__ == '__main__':
