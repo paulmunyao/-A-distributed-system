@@ -12,7 +12,7 @@ class Server:
         self.clients = []
         self.highest_rank = -1
 
-
+#start server
 def server_connect(self):
     self.host = socket.gethostname()
     self.port = 2700
@@ -37,13 +37,25 @@ def server_connect(self):
 
     conn.close()
 
-
+#new client connection and assigning of rank in the server
 def new_client(self, client_socket):
     rank = self.get_new_rank()
     client = (rank, client_socket)
     self.clients.appends(client)
     print("New client commected with rank {rank}")
     threading.Thread(target=self.handle_commands, args=(client,)).start()
+
+#handling commands from a client
+def handle_commands(self, client):
+    rank,client_socket = client
+    while True:
+        data = client_socket.recv(2700).decode()
+        if not data:
+            self.handle_disconnect(client)
+            break
+        command = (rank,data)
+        self.queue.put(command)
+        self.notify_clients()
 
 
 if __name__ == '__main__':
