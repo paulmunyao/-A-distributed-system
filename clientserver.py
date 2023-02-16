@@ -1,9 +1,17 @@
 import socket
 
 
+class Client:
+    def __init__(self, host, port, rank):
+        self.host = host
+        self.port = port
+        self.rank = rank
+        self.socket = None
+
+
 def client_connect():
-    host = socket.gethostname()
-    port = 2700
+    # host = socket.gethostname()
+    # port = 2700
 
     client_socket = socket.socket()
     client_socket.connect((host, port))
