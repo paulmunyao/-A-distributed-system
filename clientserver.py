@@ -15,6 +15,7 @@ def client_connect(self):
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((self.host, self.port))
+    print("Client connected {self.host}:{self.port}")
 
     message = input("Input message:")
 
