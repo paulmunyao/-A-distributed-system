@@ -77,17 +77,10 @@ Clone this repository to your desired folder:
  git clone https://github.com/paulmunyao/-A-distributed-system.git
 ```
 
-````
-
-### Usage
-
-To run the project, execute the following command:
+### To run the project, execute the following command:
 
 ```sh
  python3 socketserver.py -- this is for running the socket side
-````
-
-```sh
  python3 clientserver.py -- this is for running the client side
 ```
 
