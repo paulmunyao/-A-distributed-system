@@ -17,18 +17,29 @@ def client_connect(self):
     client_socket.connect((self.host, self.port))
     print("Client connected {self.host}:{self.port}")
 
-    message = input("Input message:")
 
-    while message.lower().strip() != "message":
-        client_socket.send(message.encode())
-        data = client_socket.recv(2700).decode()
+def send_command(self, command):
+    if command["rank"] < self.rank:
+        self.socket.sendall(str.encode(command["Message"]))
 
-        print("Received message from socketserver: " + data)
 
-        message = input("Do put message:")
+def receive_command(self, command):
+    while True:
+        data = self.socket.recv(2700)
+        if not data:
+            break
+        message = data.decode()
+        print("Received command from socketserver: " + message)
 
-    client_socket.close()
+
+def disconnect(self):
+    self.socket.close()
+    print("Disconnected from socketserver")
 
 
 if __name__ == "__main__":
+    client = Client("gethostname", 2700, 1)
     client_connect()
+    client.send_command({'rank': 0, 'message': 'Hello'})
+    client.receive_commands()
+    client.disconnect()
