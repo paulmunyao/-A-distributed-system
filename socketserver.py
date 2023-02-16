@@ -16,8 +16,8 @@ class Server:
 
 
 def server_connect(self):
-    self.host = socket.gethostname()
-    self.port = 2700
+    # self.host = socket.gethostname()
+    # self.port = 2700
 
     self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     self.server_socket.bind((self.host, self.port))
@@ -101,6 +101,9 @@ def notify_clients(self):
         rank, client_socket = n
         client_socket.send("New command is available".encode())
 
+
+server = Server(max_clients=100, host=socket.gethostname, port=2700)
+server.start()
 
 if __name__ == '__main__':
     server_connect()
