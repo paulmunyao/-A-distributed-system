@@ -66,23 +66,29 @@
 In order to run this project you need:
 
 ```Install python in your machine if you don't have
+
 ```
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-```git clone https://github.com/paulmunyao/-A-distributed-system.git
+```sh
+ git clone https://github.com/paulmunyao/-A-distributed-system.git
 ```
+
+````
 
 ### Usage
 
 To run the project, execute the following command:
 
-```python3 socketserver.py -- this is for running the server side
-```
+```sh
+ python3 socketserver.py -- this is for running the socket side
+````
 
-```python3 clientserver.py -- this is for running the client side
+```sh
+ python3 clientserver.py -- this is for running the client side
 ```
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
