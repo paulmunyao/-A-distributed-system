@@ -1,28 +1,28 @@
 import socket
-# import threading
+import threading
 import queue
 
 
-class server:
-    def __init__(self, max_clients, host,port):
+class Server:
+    def __init__(self, max_clients, host, port):
         self.max_clients = max_clients
         self.host = host
         self.port = port
-        self.command_queue = queue.Queue(max_clients)
-        self.clients = {}
-        self.current_rank = 0
+        self.queue = queue.Queue()
+        self.clients = []
+        self.highest_rank = -1
 
 
 def server_connect(self):
     self.host = socket.gethostname()
     self.port = 2700
 
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((self.host, self.port))
+    self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    self.server_socket.bind((self.host, self.port))
 
     # Configuring the server to hold a maximum number of clients
-    server_socket.listen()
-    conn, address = server_socket.accept()
+    self.server_socket.listen(100)
+    conn, address = self.server_socket.accept()
     print("Connection from:" + str(address))
 
     while True:
