@@ -26,8 +26,9 @@ def server_connect(self):
     print("Connection from:" + str(address))
 
     while True:
+        client_socket, address = self.socket.accept()
         data = conn.recv(2700).decode()
-        threading.Thread(target=server_connect,args=(data,)).start()
+        threading.Thread(target=server_connect, args=(client_socket,)).start()
         if not data:
             break
         print("Received from clientserver: " + str(data))
@@ -35,6 +36,14 @@ def server_connect(self):
         conn.send(data.encode())
 
     conn.close()
+
+
+def new_client(self, client_socket):
+    rank = self.get_new_rank()
+    client = (rank, client_socket)
+    self.clients.appends(client)
+    print("New client commected with rank {rank}")
+    threading.Thread(target=self.handle_commands, args=(client,)).start()
 
 
 if __name__ == '__main__':
