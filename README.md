@@ -51,8 +51,6 @@
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
