@@ -9,16 +9,14 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [A DISTRIBUTED SYSTEM] <a name="about-project"></a>
+# 📖  A DISTRIBUTED SYSTEM <a name="about-project"></a>
 
 > Build a TCP server that can accept and hold a maximum of N clients (where N is configurable).These clients are assigned ranks based on first-come-first-serve, i.e whoever connects first receives the next available high rank. Ranks are from 0–N, 0 being the highest rank.
 
@@ -100,8 +98,6 @@ Clone this repository to your desired folder:
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -110,10 +106,8 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -124,8 +118,6 @@ Feel free to check the [issues page](../../issues/).
 - https://github.com/EdwinWalela
 
 - https://github.com/habbes
-
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
