@@ -76,8 +76,8 @@ Clone this repository to your desired folder:
 ### To run the project, execute the following command:
 
 ```sh
- python3 socketserver.py -- this is for running the socket side
- python3 clientserver.py -- this is for running the client side
+ python3 socketserver.py
+ python3 clientserver.py
 ```
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
