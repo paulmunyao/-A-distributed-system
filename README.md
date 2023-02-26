@@ -30,12 +30,15 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
--python
+-Python
+-Docker
+-Shell
 
 <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://python.org/">Python</a></li>
+    <li><a href="https://www.docker.com/">Docker</a></li>
   </ul>
 </details>
 
