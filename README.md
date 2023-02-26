@@ -30,7 +30,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> The project is built entirely using python
+-python
 
 <details>
   <summary>Client</summary>
